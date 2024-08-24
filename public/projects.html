@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Jordan Quarles - Full Stack JavaScript Developer Projects | Web Portfolio
+    </title>
+    <meta
+      name="description"
+      content="Explore the innovative web projects of Jordan Quarles, a Full Stack JavaScript Developer. View demos and technical details of cutting-edge applications."
+    />
+    <meta
+      name="keywords"
+      content="Jordan Quarles, Full Stack Developer, JavaScript, Web Projects, Portfolio, React, Svelte, Firebase"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">Jordan.dev</div>
+      <div class="home-link">
+        <a href="index.html" aria-label="Home">
+          <svg
+            class="home-icon"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+        </a>
+      </div>
+    </nav>
+    <main class="projects-container">
+      <article class="project-card">
+        <h2 class="project-title">HIGH GEORGIA WELDING</h2>
+        <div class="project-content">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img
+                src="./images/image1.jpeg"
+                alt="High Georgia Welding project screenshot 1"
+                class="project-image"
+              />
+            </div>
+            <div class="mySlides fade">
+              <img
+                src="./images/image2.jpeg"
+                alt="High Georgia Welding project screenshot 2"
+                class="project-image"
+              />
+            </div>
+            <div class="mySlides fade">
+              <img
+                src="./images/image3.jpeg"
+                alt="High Georgia Welding project screenshot 3"
+                class="project-image"
+              />
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+              </svg>
+              Previous
+            </a>
+            <a class="next" onclick="plusSlides(1)">
+              Next
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+              </svg>
+            </a>
+          </div>
+          <div class="project-description">
+            <p>
+              High Georgia Welding is a full-stack Express.js web application
+              developed for a mobile welding business. The project provides an
+              online presence for the company and includes a secure dashboard
+              accessible only to authorized accounts. This dashboard allows
+              administrators to manage site images, respond to
+              customer-submitted contact forms, and add new email addresses
+              eligible for dashboard access registration.
+            </p>
+            <p>
+              Notably, this solution was developed entirely from scratch,
+              without relying on any pre-existing UI libraries. The custom-built
+              interface ensures a tailored user experience for both customers
+              and administrators. The robust back-end, utilizing session-based
+              authentication, handles user authentication, image management, and
+              form processing seamlessly, providing a secure and efficient
+              system for the business operations.
+            </p>
+          </div>
+          <div class="project-demo">
+            <h3>Demo</h3>
+            <p>Username: test@test.com | Password: password</p>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Mongoose</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">Code</a>
+            <a href="#" class="project-link">Code (Svelte)</a>
+            <a href="#" class="project-link">Demo</a>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
