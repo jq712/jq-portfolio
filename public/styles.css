@@ -384,7 +384,7 @@ p {
 }
 
 .project-content {
-  padding: var(--spacing-medium);
+  padding: var(--spacing-large);
 }
 
 .project-image {
@@ -466,11 +466,13 @@ p {
 
 /* Next & previous buttons */
 .prev, .next {
+  
   cursor: pointer;
   position: absolute;
-  bottom: 0;
-  width: auto;
-  padding: var(--spacing-medium);
+  bottom: 10px;
+  width:  auto;
+  height: 50px;
+  border-radius: var(--border-radius-small);
   color: var(--color-accent-primary);
   font-weight: bold;
   font-size: var(--font-size-large);
@@ -484,12 +486,12 @@ p {
 
 /* Position the buttons */
 .prev {
-  left: 0;
+  left: -24px;
   border-top-right-radius: var(--border-radius-small);
 }
 
 .next {
-  right: 0;
+  right: -24px;
   border-top-left-radius: var(--border-radius-small);
 }
 
@@ -502,7 +504,7 @@ p {
 .arrow-icon {
   width: 24px;
   height: 24px;
-  fill: currentColor;
+  fill: var(--color-badge-background);
 }
 
 /* Fading animation */
