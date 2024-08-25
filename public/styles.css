@@ -115,6 +115,7 @@ h3 {
   width: 1.5rem;
   height: 1.5rem;
   margin-right: var(--spacing-small);
+ 
 }
 
 a {
@@ -188,7 +189,9 @@ p {
   font-size: var(--font-size-large);
   font-weight: 600;
   max-width: fit-content;
+  display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0 auto var(--spacing-xlarge);
   border-radius: var(--border-radius-large);
   box-shadow: 0 4px 6px var(--color-badge-shadow);
