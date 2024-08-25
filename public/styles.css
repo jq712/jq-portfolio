@@ -230,9 +230,10 @@ p {
 }
 
 .skills h3 {
-  font-size: var(--font-size-xlarge);
-  margin-bottom: var(--spacing-large);
+  font-size: var(--font-size-large);
   color: var(--color-text-primary);
+  margin-top: var(--spacing-4xlarge);
+
 }
 
 .skill-list {
@@ -240,11 +241,18 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--spacing-medium);
+  padding: var(--spacing-medium) 0;
+  border-top: 2px dotted var(--color-text-secondary);
+  border-bottom: 2px dotted var(--color-text-secondary);
+  border-image: repeating-linear-gradient(to right, var(--color-text-secondary) 0, var(--color-text-secondary) 2px, transparent 2px, transparent 10px) 2;
+  border-image-slice: 2;
 }
 
 .skill-item {
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-width: 100px;
   background-color: var(--color-skill-background);
   border-radius: var(--border-radius-large);
   padding: var(--spacing-small) var(--spacing-medium);
