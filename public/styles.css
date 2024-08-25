@@ -1,19 +1,19 @@
 /* Custom properties for color palette, typography, spacing, and border radius */
 :root {
-  /* Color palette */
-  --color-background-primary: #000000;
-  --color-background-secondary: #1a1a1a;
-  --color-text-primary: #e0e0e0;
-  --color-text-secondary: #b3b3b3;
-  --color-accent-primary: #808080;
+  /* Light mode colors */
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f0f0f0;
+  --color-text-primary: #333333;
+  --color-text-secondary: #666666;
+  --color-accent-primary: #4a4a4a;
   --color-accent-secondary: #A9A049;
-  --color-skill-background: rgba(192, 192, 192, 0.5);
-  --color-badge-background: #77ad79;
+  --color-skill-background: rgba(0, 0, 0, 0.1);
+  --color-badge-background: #4CAF50;
   --color-badge-shadow: rgba(76, 175, 80, 0.1);
   --color-badge-shadow-hover: rgba(76, 175, 80, 0.2);
-  --color-button-background: #C0C0C0;
-  --color-button-text: #000000;
-  --color-button-shadow: rgba(0, 0, 0, 0.2);
+  --color-button-background: #e0e0e0;
+  --color-button-text: #333333;
+  --color-button-shadow: rgba(0, 0, 0, 0.1);
 
   /* Typography */
   --font-family-heading: "Poppins", sans-serif;
@@ -41,6 +41,23 @@
   --border-radius-large: 9999px;
 }
 
+:root[data-theme="dark"] {
+  /* Dark mode colors */
+  --color-background-primary: #000000;
+  --color-background-secondary: #1a1a1a;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #b3b3b3;
+  --color-accent-primary: #808080;
+  --color-accent-secondary: #A9A049;
+  --color-skill-background: rgba(192, 192, 192, 0.5);
+  --color-badge-background: #77ad79;
+  --color-badge-shadow: rgba(76, 175, 80, 0.1);
+  --color-badge-shadow-hover: rgba(76, 175, 80, 0.2);
+  --color-button-background: #C0C0C0;
+  --color-button-text: #000000;
+  --color-button-shadow: rgba(0, 0, 0, 0.2);
+}
+
 /* Styles for the landing page - includes global styles, layout, typography, and color scheme */
 body,
 html {
@@ -50,6 +67,66 @@ html {
   background-color: var(--color-background-primary);
   color: var(--color-text-primary);
   line-height: 1.6;
+}
+.theme-switch-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+em {
+  margin-left: 10px;
+  font-size: 1rem;
 }
 
 .container {
