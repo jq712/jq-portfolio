@@ -36,7 +36,7 @@
   --spacing-4xlarge: 4rem;
 
   /* Border radius */
-  --border-radius-small: 4px;
+  --border-radius-small: 5px;
   --border-radius-medium: 8px;
   --border-radius-large: 9999px;
 }
